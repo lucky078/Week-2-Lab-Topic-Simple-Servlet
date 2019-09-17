@@ -21,7 +21,7 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //request.setAttribute("result", "---");
+        request.setAttribute("result", "---");
         getServletContext().getRequestDispatcher("/WEB-INF/arithmeticcalculator.jsp")
                 .forward(request, response);
 
@@ -30,12 +30,11 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        double finum = 0;
-        double senum = 0;
+        double finum = 0,senum = 0;
         double result = 0;
         try {
-            finum = Double.parseDouble(request.getParameter("numf"));
-            senum = Double.parseDouble(request.getParameter("nums"));
+            finum = Double.parseDouble(request.getParameter("fnum"));
+            senum = Double.parseDouble(request.getParameter("snum"));
         } catch (NumberFormatException | NullPointerException e) {
             request.setAttribute("result", "invalid ");
             getServletContext().getRequestDispatcher("/WEB-INF/arithmeticcalculator.jsp").forward(request, response);
