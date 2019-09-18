@@ -8,12 +8,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="css/age.css" rel="stylesheet" type="text/css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
     <body>
         <h1>Arithmetic Calculator</h1>
-        <form>
+        <form action="arithmetic" method="post">
             First<input type="number" name="fnum" value="${numf}"><br>
             Second<input type="number" name="snum" value="${nums}"><br>
             <input type="submit" name="add" value="+">
@@ -22,7 +23,7 @@
             <input type="submit" name="mol" value="%">
              
         </form>
-            <p> Result${result}</p>
+            <p>Result ${result}<p><br>
             <a href="age">Age Calculator</a>
     </body>
 </html>

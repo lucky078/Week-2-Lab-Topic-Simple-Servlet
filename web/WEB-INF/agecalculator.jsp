@@ -8,8 +8,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="css/age.css" rel="stylesheet" type="text/css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
         <h1>Age Calculator</h1>
     </head>
     <body>
